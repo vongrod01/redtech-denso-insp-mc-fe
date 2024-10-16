@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/js/fontawesome/all.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/sweetalert/sweetalert2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container-title">
+        <center>
+
+            <div class="text1"><u>E-Performance</u></div>
+            <div class="text2">Data Visualization for Inspection Test M/C</div>
+        </center>
+    </div>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <div class="login">
+                    <img src="../../static/img/densologo.png" class="img-fluid rounded-3 logo">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="User name" id="edtUserName">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password" id="edtPassword">
+                    </div>
+                    <button class="button login__submit" onclick="login()">
+                        <span class="button__text" style="
+                        margin-left: auto;">Log&nbsp In&nbsp Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const host = '{{host}}'
+    const csrf_token = { "X-CSRFToken": '{{csrf_token}}' };
+    const url_set_session_user = "{% url 'set_session_user' %}"
+    const url_test_bench_mc = "{% url 'test_bench_mc' %}"
+</script>
+
+<script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/helper.js' %}"></script>
+
+</html>

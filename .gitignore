@@ -1,0 +1,9 @@
+*.ini
+*.pyc
+*.cpython-38.pyc
+*.yml
+*.cfg
+*.zip
+__pycache__/
+Scripts
+Lib

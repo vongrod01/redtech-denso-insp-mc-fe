@@ -1,0 +1,50 @@
+:root {
+
+    --theme-abnormal-font-color: #FFFFFF;
+    --theme-abnormal-color: #D22B2B;
+}
+
+.display-abnormal-content *.input-group-text.span-layout{
+    background-color: var(--theme-abnormal-color) !important;
+    color: var(--theme-abnormal-font-color) !important;
+    border: 1px solid var(--theme-abnormal-color) !important;
+    display: flex;
+    justify-content: end;
+  }
+  .display-abnormal-content *:where(.form-select,.form-control){
+    background-color: var(--theme-abnormal-font-color) !important;
+    color: var(--theme-abnormal-color) !important;
+    border: 1px solid var(--theme-abnormal-color) !important;
+  }
+  
+  .display-abnormal-content *:where(input[type=text],select,select option){
+    background-color: #fff;
+    color: var(--theme-abnormal-color);
+  }
+
+
+.display-abnormal-header {
+    background-color: var(--theme-abnormal-color);
+    color: var(--theme-abnormal-font-color);
+}
+
+.display-abnormal-header .modal-title {
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px 5px 5px 10px;
+    color: var(--theme-abnormal-color);
+    background-color: var(--theme-abnormal-font-color);
+    border-radius: 5px;
+}
+
+.display-abnormal-header .modal-title span:nth-child(2) {
+    color: var(--theme-abnormal-font-color);
+    background-color: var(--theme-abnormal-color);
+    padding: 5px 10px 5px 10px;
+    margin-left: 5px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.display-abnormal-header .btn {
+    color: inherit;
+}

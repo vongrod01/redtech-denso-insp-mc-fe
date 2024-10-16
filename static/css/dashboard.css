@@ -1,0 +1,242 @@
+:root {
+  --h-sel-chart-view: 96px;
+
+  --h-spec-chart-view: 150px;
+  --h-btn-chart: 60px;
+  --h-content-chart-view: calc(100vh - var(--h-nav) - var(--h-sel-chart-view) - var(--h-spec-chart-view) - var(--h-btn-chart) - var(--h-detail) - 98px);
+
+  --theme-chart-daily-color: #1f0344;
+  --theme-chart-daily-font-color: #fff;
+
+  --theme-chart-monthly-color: #302B2B;
+  --theme-chart-monthly-font-color: #fff;
+
+
+  --theme-tab-data-browsing-color:#000;
+  --theme-tab-data-browsing-font-color:#fff;
+
+  --theme-tab-dshboard-color:#000;
+  --theme-tab-dshboard-font-color:#fff;
+
+}
+
+
+
+#nav-tabContentDashboard{
+  height: var(--h-tab-content-in-tab-menu);
+}
+
+#pnlSelectDailyPerformance, #pnlSelectMonthlyPerformance {
+  height: var(--h-sel-chart-view);
+}
+
+#pnlSelectDailyPerformance *.input-group-text.span-layout{
+  background-color: var(--theme-chart-daily-color) !important;
+  color: var(--theme-chart-daily-font-color) !important;
+  border: 1px solid var(--theme-chart-daily-color) !important;
+  display: flex;
+  justify-content: end;
+}
+#pnlSelectMonthlyPerformance *.input-group-text.span-layout{
+  background-color: var(--theme-chart-monthly-color) !important;
+  color: var(--theme-chart-monthly-font-color) !important;
+  border: 1px solid var(--theme-chart-monthly-color) !important;
+  display: flex;
+  justify-content: end;
+}
+#pnlSelectDailyPerformance *:where(.form-select,.form-control){
+  background-color: var(--theme-chart-daily-font-color) !important;
+  color: var(--theme-chart-daily-color) !important;
+  border: 1px solid var(--theme-chart-daily-color) !important;
+}
+
+#pnlSelectMonthlyPerformance *:where(.form-select,.form-control){
+  background-color: var(--theme-chart-monthly-font-color) !important;
+  color: var(--theme-chart-monthly-color) !important;
+  border: 1px solid var(--theme-chart-monthly-color) !important;
+}
+
+
+#pnlSelectDailyPerformance *:where(input[type=text],select,select option){
+  background-color: #fff;
+  color: var(--theme-chart-daily-color);
+}
+
+#pnlSelectMonthlyPerformance *:where(input[type=text],select,select option){
+  background-color: #fff;
+  color: var(--theme-chart-monthly-color);
+}
+
+
+
+#pnlSpecDailyPerformance {
+  height: var(--h-spec-chart-view);
+  border: 2px solid var(--theme-chart-daily-color);
+  border-radius: 5px 0 0 5px;
+}
+#pnlSpecMonthlyPerformance {
+  height: var(--h-spec-chart-view);
+  border: 2px solid var(--theme-chart-monthly-color);
+  border-radius: 5px 0 0 5px;
+}
+
+#pnlButtonChartDaily, #pnlButtonChartMonthly {
+  height: var(--h-btn-chart);
+}
+
+#pnlButtonChartDaily div button,#pnlButtonChartMonthly div button{
+  background-color:transparent;
+}
+#pnlButtonChartDaily div button *{
+  color: var(--theme-chart-daily-color);
+}
+#pnlButtonChartMonthly div button *{
+  color: var(--theme-chart-monthly-color);
+}
+
+
+#pnlContentDailyPerformance, #pnlContentMonthlyPerformance {
+  height: var(--h-content-chart-view);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+
+
+
+.spec-title-daily {
+  display: flex;
+  justify-content: center;
+  background-color: var(--theme-chart-daily-color);
+  color: var(--theme-chart-daily-font-color);
+  align-items: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+.spec-title-monthly {
+  display: flex;
+  justify-content: center;
+  background-color: var(--theme-chart-monthly-color);
+  color: var(--theme-chart-monthly-font-color);
+  align-items: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.spec-detail-daily, .spec-detail-monthly {
+  display: flex;
+}
+
+.spec-detail-daily .detail {
+  background-color: var(--theme-chart-daily-font-color);
+  border: 2px solid var(--theme-chart-daily-color);
+  border-radius: 5px;
+  padding: 2px;
+}
+.spec-detail-monthly .detail {
+  background-color: var(--theme-chart-monthly-font-color);
+  border: 2px solid var(--theme-chart-monthly-color);
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.spec-detail-daily .detail .header {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  color: var(--theme-chart-daily-color);
+  align-items: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+.spec-detail-monthly .detail .header {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  color: var(--theme-chart-monthly-color);
+  align-items: center;
+  font-weight: bold;
+  font-size: x-large;
+}
+.spec-detail-daily .detail .value {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  color: #fff;
+  background-color: var(--theme-chart-daily-color);
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 0 0 5px 5px;
+}
+.spec-detail-monthly .detail .value {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  color: #fff;
+  background-color: var(--theme-chart-monthly-color);
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+  border-radius: 0 0 5px 5px;
+}
+
+#nav-tabContentDashboard{
+  border: 1px solid var(--theme-tab-dshboard-color) !important;
+}
+
+
+/* nav .nav-tabs button {
+
+  color: var(--theme-tab-color) !important;
+  font-weight: bold !important;
+  border: 1px solid var(--theme-tab-color) !important;
+  border-bottom: 0 !important;
+} */
+nav .nav-tabs #tab-menu-chart-daily,
+nav .nav-tabs #tab-menu-chart-monthly {
+  border: 1px solid var(--theme-tab-dshboard-color) !important;
+  color: var(--theme-tab-dshboard-color) !important;
+  font-weight: bold !important;
+  border-bottom: 0 !important;
+}
+
+
+nav .nav-tabs #tab-menu-chart-daily.active,
+nav .nav-tabs #tab-menu-chart-monthly.active {
+  background-color: var(--theme-tab-dshboard-color) !important;
+  color: var(--theme-tab-dshboard-font-color) !important;
+  font-weight: bold !important;
+}
+
+
+#pnlSpecDailyPerformance * input[type="radio"]:checked+label{ 
+  
+  font-weight: bold; 
+  color: var(--theme-chart-daily-color); 
+} 
+#pnlSpecDailyPerformance * input[type="radio"]+label{  
+  color: var(--theme-chart-daily-color); 
+} 
+#pnlSpecDailyPerformance * input[type="radio"]:checked{ 
+  
+  background-color: var(--theme-chart-daily-color);
+  border-color: var(--theme-chart-daily-color);
+} 
+
+
+#pnlSpecMonthlyPerformance * input[type="radio"]:checked+label{ 
+  
+  font-weight: bold; 
+  color: var(--theme-chart-monthly-color); 
+} 
+#pnlSpecMonthlyPerformance * input[type="radio"]+label{  
+  color: var(--theme-chart-monthly-color); 
+} 
+#pnlSpecMonthlyPerformance * input[type="radio"]:checked{ 
+  
+  background-color: var(--theme-chart-monthly-color);
+  border-color: var(--theme-chart-monthly-color);
+} 
+
